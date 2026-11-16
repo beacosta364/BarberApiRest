@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: BarberApiRest
+
+  datasource:
+    url: jdbc:postgresql://ep-cold-mode-ak3ookhr.c-3.us-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+    username: neondb_owner
+    password: npg_ml1ROpuh0Bbt
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+info:
+  app:
+    name: API de Barbería
+    description: API REST para la gestión de clientes, barberos, servicios y citas.
+    version: 1.0.0
